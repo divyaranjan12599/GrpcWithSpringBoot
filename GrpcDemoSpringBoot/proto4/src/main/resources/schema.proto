@@ -1,0 +1,23 @@
+syntax="proto3";
+
+ 
+option java_package="com.grpcstubfolder"; 
+
+option java_multiple_files=true;
+
+service BookAuthorService{
+		rpc Author(Author) returns (Author);
+			
+}
+
+message Book{
+	int32 book_id=1;
+	string title=2;
+	float price=3;
+	int32 author_id=4;
+}
+message Author{
+	int32 author_id=1;
+	string name=2;
+	int32 book_id=3;
+} 
